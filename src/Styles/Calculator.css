@@ -1,0 +1,142 @@
+#calculatorTitle {
+    position: relative;
+    width: 100%;
+    background-color: black;
+    color: cyan;
+    border-bottom: 2px solid cyan;
+    height: 50px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+#topInfo {
+    margin-top: -15px;
+    text-indent: 10px;
+}
+
+#RValue {
+    position: relative;
+    left: 40%;
+    top: -22px;
+    width: 100px;
+}
+
+#year {
+    position: relative;
+    left: 75%;
+    top: -43px;
+    width: 60px;
+}
+
+#additionalCosts {
+    text-indent: 30px;
+}
+
+#originalCost {
+    font-weight: 700;
+}
+
+#originalCostInput {
+    position: relative;
+    left: 40%;
+    top: -24px;
+    width: 100px;
+}
+
+#originalCostInput1 {
+    position: relative;
+    left: 45%;
+    top: -24px;
+    width: 100px;
+}
+
+#CAZ {
+    margin-top: 10px;
+}
+
+#input1 {
+    position: relative;
+    left: 40%;
+    top: -25px;
+    width: 100px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+#input2 {
+    position: relative;
+    left: 45%;
+    top: -25px;
+    width: 100px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+#energyAudit {
+    margin-top: -10px;
+}
+
+#airSeal {
+    margin-top: -10px;
+}
+
+#ventilation {
+    margin-top: -10px;
+}
+
+#rebate {
+    margin-top: -10px;
+}
+
+#other {
+    margin-top: -10px;
+}
+
+#other1 {
+    margin-top: -10px;
+}
+
+#atInstall {
+    margin-top: 20px;
+    text-indent: 30px;
+}
+
+#costAtInstall {
+    font-weight: 700;
+}
+
+#rebateAtInstall {
+    margin-top: 10px;
+}
+
+#taxCredit {
+    margin-top: -10px;
+}
+
+#totalInvestment {
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+#date  {
+    position: relative;
+    left: 73%;
+    width: 120px;
+}
+
+#smallText {
+    text-indent: 10px;
+    font-size: 7px;
+}
+
+#bottomOfPage {
+    background-color: cyan;
+    border-top: 4px solid black;
+    height: 50px;
+}
+
+#siteName {
+    position: relative;
+    text-indent: 10px;
+    top: 20%;
+}
