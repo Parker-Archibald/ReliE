@@ -121,10 +121,13 @@
 #date  {
     position: relative;
     left: 73%;
+    bottom: 0%;
     width: 120px;
 }
 
 #smallText {
+    position: fixed;
+    bottom: 8%;
     text-indent: 10px;
     font-size: 7px;
 }
