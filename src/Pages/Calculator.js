@@ -58,7 +58,7 @@ class Calculator extends Component {
                     <input id='originalCostInput1'/>
                 </div>
                 <div id='date'>Date: {today} </div>
-                <div id='smallText'>*This quoted cost is subject to changeuntil written on an official invoice. Cost may change based on available funding fromany incentive provider.</div>
+                <div id='smallText'>*This quoted cost is subject to change until written on an official invoice. Cost may change based on available funding from any incentive provider.</div>
                 <div id='bottomOfPage'>
                     <div id='siteName'>www.relienergysolutions.com</div>
                 </div>
