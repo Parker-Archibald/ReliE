@@ -62,9 +62,6 @@ class Calculator extends Component {
                 <div id='bottomOfPage'>
                     <div id='siteName'>www.relienergysolutions.com</div>
                 </div>
-                <div>
-                    test
-                </div>
             </div>
         )
     }
