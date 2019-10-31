@@ -130,6 +130,10 @@
 }
 
 #bottomOfPage {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
     background-color: cyan;
     border-top: 4px solid black;
     height: 50px;
