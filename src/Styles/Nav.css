@@ -1,0 +1,159 @@
+#calculatorTitle {
+    position: relative;
+    width: 100%;
+    background-color: black;
+    color: cyan;
+    border-bottom: 2px solid cyan;
+    height: 50px;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 30px;
+}
+#bottomOfPage {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    background-color: cyan;
+    border-top: 4px solid black;
+    height: 50px;
+}
+
+#siteName {
+    position: relative;
+    text-indent: 10px;
+    top: 20%;
+}
+
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+  position: fixed;
+  left: 10px;
+  top: 6px;
+  z-index: 1000;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: cyan;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.newBar1, .newBar2, .newBar3 {
+  animation: closeX 1s forwards;
+}
+
+.change1 {
+  position: relative;
+  top: 6px;
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  transition: 0.4s;
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-2px, 6px);
+  animation: slideX 1.2s forwards;
+}
+
+.change2 {
+    opacity: 0;
+}
+
+.change3 {
+    position: relative;
+    top: 6.5px;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-1px, -8px);
+    animation: slideX 1.2s forwards;
+}
+
+.leftNav {
+    display: none;
+}
+
+.leftNavClose {
+    animation: closeBar 1s forwards;
+}
+
+.leftNavShowing {
+   animation: openBar 1s forwards;
+   
+}
+
+@keyframes openBar  {
+    0% {
+        position: relative;
+        background-color: cyan;
+        width: 40%;
+        top: -74px;
+        height: 692px;
+        font-size: 25px;
+        left: -210px;
+    }
+    100% {
+        position: relative;
+        background-color: cyan;
+        width: 40%;
+        top: -74px;
+        height: 692px;
+        font-size: 25px;
+        left: 0px;
+    }
+}
+
+@keyframes slideX {
+    0% {
+        left: 10px;
+    }
+    100% {
+        left: 140px;
+    }
+}
+
+@keyframes closeX {
+    0% {
+        left: 150px;
+    }
+    100% {
+        width: 35px;
+        height: 5px;
+        background-color: cyan;
+        margin: 6px 0;
+        transition: 0.4s;
+        left: 10px; 
+    }
+}
+
+@keyframes closeBar {
+    0% {
+        position: relative;
+        background-color: cyan;
+        width: 40%;
+        top: -74px;
+        height: 692px;
+        font-size: 25px;
+        left: 0px;
+    }
+    99% {
+        position: relative;
+        background-color: cyan;
+        width: 40%;
+        top: -74px;
+        height: 692px;
+        font-size: 25px;
+        left: -210px;
+    }
+    100% {
+        display: none forwards;
+    }
+}

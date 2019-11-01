@@ -11,7 +11,6 @@ class Calculator extends Component {
     render() {
         return (
             <div>
-                <h1 id='calculatorTitle'>RELI ENERGY SOLUTIONS</h1>
                 <div id='topInfo'>
                     <div id='squareFoot'>Square footage: </div>
                     <div id='RValue'>Pre R Value: </div>
@@ -59,9 +58,6 @@ class Calculator extends Component {
                 </div>
                 <div id='date'>Date: {today} </div>
                 <div id='smallText'>*This quoted cost is subject to change until written on an official invoice. Cost may change based on available funding from any incentive provider.</div>
-                <div id='bottomOfPage'>
-                    <div id='siteName'>www.relienergysolutions.com</div>
-                </div>
             </div>
         )
     }

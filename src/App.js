@@ -1,12 +1,17 @@
 import React from 'react';
-import Calculator from '../src/Pages/Calculator';
+import Nav from '../src/config/Nav';
+import Routes from '../src/config/Routes';
+import {BrowserRouter as Router} from 'react-router-dom';
 
 document.title = 'ReliEnergy';
 
 function App() {
   return (
     <div>
-      <Calculator/>
+      <Router>
+        <Nav/>
+        <Routes/>
+      </Router>
     </div>
   );
 }
