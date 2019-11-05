@@ -10,7 +10,7 @@ today = `${dd}/${mm}/${yyyy}`
 class Calculator extends Component {
     render() {
         return (
-            <div>
+            <div id='allCalc'>
                 <div id='topInfo'>
                     <div id='squareFoot'>Square footage: </div>
                     <div id='RValue'>Pre R Value: </div>

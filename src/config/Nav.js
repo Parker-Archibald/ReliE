@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import '../Styles/Nav.css';
 
 let open = false;
@@ -32,11 +33,12 @@ class Nav extends Component {
                 RELI ENERGY SOLUTIONS
                 </h1>
                 <div id='leftNav' className='leftNav'>
-                    <div>First Name</div>
-                    <div>Orders</div>
-                    <div>Quotes</div>
-                    <div>Paperwork</div>
-                    <div>Sign Out</div>
+                    <Link to='/profile'><button id='profile'>Profile</button></Link>
+                    <Link to='dashboard'><button id='dashboard'>Dashboard</button></Link>
+                    <Link to='/orders'><button id='orders'>Orders</button></Link>
+                    <Link to='/quotes'><button id='quotes'>Quotes</button></Link>
+                    <Link to='/paperwork'><button id='paperwork'>Paperwork</button></Link>
+                    <button id='signout'>Signout</button>
                 </div>
                 <div id='bottomOfPage'>
                     <div id='siteName'>www.relienergysolutions.com</div>
