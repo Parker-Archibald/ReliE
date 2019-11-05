@@ -26,7 +26,7 @@
     text-indent: 20px;
 } 
 
-#loginSubmit {
+.loginSubmit {
     position: relative;
     border-radius: 100px;
     border: none;
@@ -41,3 +41,28 @@
     left: 34%;
     top: 320px;
 } 
+
+.submitChange {
+    position: relative;
+    border-radius: 100px;
+    border: none;
+    font-size: 25px;
+    background-color: cyan;
+    left: -145px;
+    top: 300px;
+    animation: changeBtn 1s forwards;
+}
+
+@keyframes changeBtn {
+    0% {
+        z-index: 1000;
+    }
+    100% {
+        border-radius: 0;
+        top: -242px;
+        width: 600px;
+        height: 1200px;
+        z-index: 1000;
+        margin-bottom: -700px;
+    }
+}

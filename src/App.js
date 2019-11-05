@@ -9,11 +9,10 @@ document.title = 'ReliEnergy';
 function App() {
   return (
     <div>
-      {/* <Router>
+      <Router>
         <Nav/>
         <Routes/>
-      </Router> */}
-      <Login/>
+      </Router>
     </div>
   );
 }

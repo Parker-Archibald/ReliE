@@ -2,11 +2,33 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Login from '../src/Pages/Login';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+let loggedIn = false;
+let aEmail = 'p@p.com';
+let pass = 'pass';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+export const changeLoginStatus = (email, password) => {
+    if(email === aEmail && password === pass) {
+        loggedIn = true;
+        testLogin(true);
+    }
+    else {
+        alert('User not Logged in');
+    }
+}
+
+export const testLogin = (status) => {
+    if (loggedIn === true || status === true) {
+        ReactDOM.render(<App />, document.getElementById('root'));
+    }
+    else {
+        ReactDOM.render(<Login callback={changeLoginStatus}/>, document.getElementById('root'));
+    }
+}
+
+testLogin();
+
+
 serviceWorker.unregister();

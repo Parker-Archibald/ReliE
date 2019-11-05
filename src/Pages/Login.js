@@ -2,13 +2,31 @@ import React, {Component} from 'react';
 import '../Styles/Login.css';
 
 class Login extends Component {
+
+    state = {
+        email: '',
+        password: ''
+    }
+
+    handleChange = ({target}) => {
+        this.setState({[target.name]: target.value});
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        document.getElementById('loginSubmit').className='submitChange';
+        this.props.callback(this.state.email, this.state.password);
+    }
+
     render() {
         return(
             <div>
                 <div id='logo'><img src={require('../Styles/Pictures/Logo.png')} style={{width: '200px'}}/></div>
-                <input type='email' id='loginEmail' placeholder='Email'/>
-                <input type='password' id='loginPass' placeholder='Password'/>
-                <button type='submit' id='loginSubmit'>Submit</button>
+                <form onSubmit={this.handleSubmit}>
+                    <input type='email' id='loginEmail' name='email' placeholder='Email' onChange={this.handleChange}/>
+                    <input type='password' id='loginPass' name='password' placeholder='Password' onChange={this.handleChange}/>
+                    <button type='submit' id='loginSubmit' className='loginSubmit'>Submit</button>
+                </form>
                 <div id='forgotPass'>Forgot Password?</div>
             </div>
         )
