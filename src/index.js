@@ -5,13 +5,16 @@ import App from './App';
 import Login from '../src/Pages/Login';
 import * as serviceWorker from './serviceWorker';
 
-let loggedIn = false;
+
 let aEmail = 'p@p.com';
 let pass = 'pass';
 
+let testCookie;
+let cookieArray = [];
+
 export const changeLoginStatus = (email, password) => {
     if(email === aEmail && password === pass) {
-        loggedIn = true;
+        document.cookie = `loggedIn=true`;
         testLogin(true);
     }
     else {
@@ -20,7 +23,7 @@ export const changeLoginStatus = (email, password) => {
 }
 
 export const testLogin = (status) => {
-    if (loggedIn === true || status === true) {
+    if (document.cookie === `loggedIn=true`) {
         ReactDOM.render(<App />, document.getElementById('root'));
     }
     else {

@@ -6,26 +6,25 @@ let open = false;
 
 class Nav extends Component {
 
-    myFunction = () => {
-        if(document.getElementById('bar1').className === 'bar1' || document.getElementById('bar1').className === 'newBar1') {
-            document.getElementById('bar1').className = 'change1';
-            document.getElementById('bar2').className = 'change2';
-            document.getElementById('bar3').className = 'change3';
-            document.getElementById('leftNav').className = 'leftNavShowing';
-        }
-        else {
-            document.getElementById('bar1').className = 'newBar1';
-            document.getElementById('bar2').className = 'newBar2';
-            document.getElementById('bar3').className = 'newBar3';
-            document.getElementById('leftNav').className = 'leftNavClose';
-        }
+    openBar = () => {
+        document.getElementById('leftNav').className = 'leftNavShowing';
+    }
+
+    closeBar = () => {
+        document.getElementById('leftNav').className = 'leftNavClose';
+    }
+
+    logout = (e) => {
+        e.preventDefault();
+        document.cookie = `loggedIn=false`;
+        document.location.reload(true);
     }
 
     render() {
         return(
             <div>
                 <h1 id='calculatorTitle'><meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-                <div class="container" onClick={this.myFunction}>
+                <div class="container" onClick={this.openBar} onMouseLeave={this.closeBar}>
                     <div id='bar1' className="bar1"></div>
                     <div id='bar2' className="bar2"></div>
                     <div id='bar3' className="bar3"></div>
@@ -38,7 +37,7 @@ class Nav extends Component {
                     <Link to='/orders'><button id='orders'>Orders</button></Link>
                     <Link to='/quotes'><button id='quotes'>Quotes</button></Link>
                     <Link to='/paperwork'><button id='paperwork'>Paperwork</button></Link>
-                    <button id='signout'>Signout</button>
+                    <button id='signout' onClick={this.logout}>Signout</button>
                 </div>
                 <div id='bottomOfPage'>
                     <div id='siteName'>www.relienergysolutions.com</div>

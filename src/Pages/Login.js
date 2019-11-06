@@ -14,7 +14,6 @@ class Login extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        document.getElementById('loginSubmit').className='submitChange';
         this.props.callback(this.state.email, this.state.password);
     }
 

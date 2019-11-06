@@ -1,0 +1,51 @@
+#quotesBack {
+    position: fixed;
+    top: 6%;
+    height: 87.5%;
+    width: 100%;
+    background-color: #E8E8E8;
+}
+
+#quoteBox {
+    position: relative;
+    top: 5%;
+    background-color: white;
+    width: 90%;
+    left: 5%;
+    box-shadow: 1px 1px 3px gray;
+}
+
+#quoteTitle {
+    text-indent: 10px;
+    font-size: 20px;
+}
+
+#newQuote {
+    position: relative;
+    border: none;
+    background-color: cyan;
+    border-radius: 4px;
+    left: 80%;
+    top: -25px;
+}
+
+#allQuotes {
+    position: relative;
+    top: 60px;
+    background-color: white;
+    width: 90%;
+    left: 5%;
+    box-shadow: 1px 1px 3px gray;
+}
+
+#allQuotesTitle {
+    text-indent: 10px;
+}
+
+#underline {
+    position: relative;
+    border-bottom: 1px solid lightgray;
+    width: 95%;
+    left: 2%;
+    top: 5px;
+}
