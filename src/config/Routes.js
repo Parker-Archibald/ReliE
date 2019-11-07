@@ -6,6 +6,7 @@ import Orders from '../Pages/Orders';
 import Quotes from '../Pages/Quotes';
 import Paperwork from '../Pages/Paperwork';
 import Dashboard from '../Pages/Dashboard';
+import NewQuote from '../Pages/NewQuote';
 
 const Routes = () => {
     return (
@@ -16,6 +17,7 @@ const Routes = () => {
             <Route path='/orders' component={() => <Orders/>} />
             <Route path='/quotes' component={() => <Quotes/>} />
             <Route path='/paperwork' component={() => <Paperwork/>} />
+            <Route path='/newquote' component={() => <NewQuote/>}/>
         </>
     )
 }

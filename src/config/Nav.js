@@ -31,7 +31,7 @@ class Nav extends Component {
                 </div>
                 RELI ENERGY SOLUTIONS
                 </h1>
-                <div id='leftNav' className='leftNav' onblue={this.closeBar}>
+                <div id='leftNav' className='leftNav' onBlur={this.closeBar}>
                     <div onClick={this.closeBar}><Link to='/profile'><button id='profile'>Profile</button></Link></div>
                     <div onClick={this.closeBar}><Link to='/'><button id='dashboard'>Dashboard</button></Link></div>
                     <div onClick={this.closeBar}><Link to='/orders'><button id='orders'>Orders</button></Link></div>

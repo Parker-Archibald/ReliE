@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import '../Styles/Quotes.css';
 
 class Quotes extends Component {
@@ -7,7 +8,7 @@ class Quotes extends Component {
             <div id='quotesBack'>
                 <div id='quoteBox'>
                     <div id='quoteTitle'>Quotes</div>
-                    <button id='newQuote'>Add New</button>
+                    <Link to='/newquote'><button id='newQuote'>Add New</button></Link>
                 </div>
                 <div id='allQuotes'>
                     <div id='allQuotesTitle'>All Quotes</div>
