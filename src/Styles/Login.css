@@ -2,6 +2,7 @@
     position: relative;
     left: 25%;
     top: 100px;
+    width: 100px;
 }
 
 #loginEmail {
@@ -38,6 +39,7 @@
 
 #forgotPass {
     position: relative;
+    width: 130px;
     left: 34%;
     top: 320px;
 } 

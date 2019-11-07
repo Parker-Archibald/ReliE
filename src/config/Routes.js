@@ -10,12 +10,12 @@ import Dashboard from '../Pages/Dashboard';
 const Routes = () => {
     return (
         <>
+            <Route exact path='/' component={() => <Dashboard/>}/>
             <Route path='/calculator' component={() => <Calculator/>}/>
             <Route path='/profile' component={() => <Profile/>}/>
             <Route path='/orders' component={() => <Orders/>} />
             <Route path='/quotes' component={() => <Quotes/>} />
             <Route path='/paperwork' component={() => <Paperwork/>} />
-            <Route exact path='/dashboard' component={() => <Dashboard/>}/>
         </>
     )
 }

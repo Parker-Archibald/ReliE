@@ -26,7 +26,6 @@
     top: 20%;
 }
 
-
 .container {
   display: inline-block;
   cursor: pointer;
@@ -37,6 +36,7 @@
 }
 
 #profile {
+    z-index: 1000;
     text-align: left;
     border: none;
     background: transparent;
@@ -46,6 +46,7 @@
 }
 
 #dashboard {
+    z-index: 1000;
     text-align: left;
     border: none;
     background: transparent;
@@ -99,6 +100,7 @@
 }
 
 .leftNav {
+    z-index: 1000;
     display: none;
 }
 
@@ -107,6 +109,7 @@
 }
 
 .leftNavShowing {
+    z-index: 1000;
    animation: openBar 1s forwards;
    
 }

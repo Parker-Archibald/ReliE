@@ -33,7 +33,7 @@ class Nav extends Component {
                 </h1>
                 <div id='leftNav' className='leftNav'>
                     <Link to='/profile'><button id='profile'>Profile</button></Link>
-                    <Link to='dashboard'><button id='dashboard'>Dashboard</button></Link>
+                    <Link to='/'><button id='dashboard'>Dashboard</button></Link>
                     <Link to='/orders'><button id='orders'>Orders</button></Link>
                     <Link to='/quotes'><button id='quotes'>Quotes</button></Link>
                     <Link to='/paperwork'><button id='paperwork'>Paperwork</button></Link>
