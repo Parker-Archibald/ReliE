@@ -10,10 +10,93 @@ today = `${dd}/${mm}/${yyyy}`;
 
 class NewQuote extends Component {
 
-    handleClick = () => {
-        document.getElementById('SolarFan1').className = 'SolarFan1A';
-        document.getElementById('SolarFan2').className = 'SolarFan2A';
+    handleClickFan = () => {
+        if(document.getElementById('SolarFan1').className === 'SolarFan1') {
+            document.getElementById('SolarFan1').className = 'SolarFan1A';
+            document.getElementById('SolarFan2').className = 'SolarFan2A';
+        }
+        else {
+            document.getElementById('SolarFan1').className = 'SolarFan1';
+            document.getElementById('SolarFan2').className = 'SolarFan2';
+        }
     }
+
+    handleClickVent = () => {
+        if(document.getElementById('newAdminFee1').className === 'newAdminFee1') {
+            document.getElementById('newAdminFee1').className = 'newAdminFee1A';
+            document.getElementById('newAdminFee2').className = 'newAdminFee1A';
+        }
+        else {
+            document.getElementById('newAdminFee1').className = 'newAdminFee1';
+            document.getElementById('newAdminFee2').className = 'newAdminFee2';
+        }
+    }
+
+    handleClickBaffle = () => {
+        if(document.getElementById('baffles1').className === 'baffles1') {
+            document.getElementById('baffles1').className = 'baffles1A';
+            document.getElementById('baffles2').className = 'baffles1A';
+        }
+        else {
+            document.getElementById('baffles1').className = 'baffles1';
+            document.getElementById('baffles2').className = 'baffles2';
+        }
+    }
+
+    handleClickGas = () => {
+        if(document.getElementById('gas1').className === 'gas1') {
+            document.getElementById('gas1').className = 'gas1A';
+            document.getElementById('gas2').className = 'gas1A';
+        }
+        else {
+            document.getElementById('gas1').className = 'gas1';
+            document.getElementById('gas2').className = 'gas2';
+        }
+    }
+
+    handleClickCO = () => {
+        if(document.getElementById('CO1').className === 'CO1') {
+            document.getElementById('CO1').className = 'CO1A';
+            document.getElementById('CO2').className = 'CO1A';
+        }
+        else {
+            document.getElementById('CO1').className = 'CO1';
+            document.getElementById('CO2').className = 'CO2';
+        }
+    }
+
+    handleClickAudit = () => {
+        if(document.getElementById('energyAudit1').className === 'energyAudit1') {
+            document.getElementById('energyAudit1').className = 'energyAudit1A';
+            document.getElementById('energyAudit2').className = 'energyAudit1A';
+        }
+        else {
+            document.getElementById('energyAudit1').className = 'energyAudit1';
+            document.getElementById('energyAudit2').className = 'energyAudit2';
+        }
+    }
+
+    handleClickAirSeal = () => {
+        if(document.getElementById('airSeal1').className === 'airSeal1') {
+            document.getElementById('airSeal1').className = 'airSeal1A';
+            document.getElementById('airSeal2').className = 'airSeal1A';
+        }
+        else {
+            document.getElementById('airSeal1').className = 'airSeal1';
+            document.getElementById('airSeal2').className = 'airSeal2';
+        }
+    }
+    handlelightCovers = () => {
+        if(document.getElementById('lightCovers1').className === 'lightCovers1') {
+            document.getElementById('lightCovers1').className = 'lightCovers1A';
+            document.getElementById('lightCovers2').className = 'lightCovers1A';
+        }
+        else {
+            document.getElementById('lightCovers1').className = 'lightCovers1';
+            document.getElementById('lightCovers2').className = 'lightCovers2';
+        }
+    }
+    handlelightCovers
 
     render() {
         return(
@@ -67,8 +150,8 @@ class NewQuote extends Component {
                     <div id='newQuoteLine'/>
                     <div id='margin'>
                         <label id='checkboxContainer'>Solar Fan
-                            <input type='checkbox'/>
-                            <span id='checkmark' onClick={this.handleClick}></span>
+                            <input type='checkbox' onClick={this.handleClickFan}/>
+                            <span id='checkmark'></span>
                         </label>
                         <input type='text' placeholder='1' id='SolarFan1' className='SolarFan1'/>
                         <input type='text' placeholder='1' id='SolarFan2' className='SolarFan2'/>
@@ -76,45 +159,59 @@ class NewQuote extends Component {
                     </div>
                     <div id='margin'>
                         <label id='checkboxContainer'>Exhaust Fan Ventilation
-                            <input type='checkbox'/>
+                            <input type='checkbox' onClick={this.handleClickVent}/>
                             <span id='checkmark'></span>
                         </label>
+                        <input type='text' placeholder='1' id='newAdminFee1' className='newAdminFee1'/>
+                        <input type='text' placeholder='1' id='newAdminFee2' className='newAdminFee2'/>
                     </div>
                     <div id='margin'>
                         <label id='checkboxContainer'>Baffles
-                            <input type='checkbox'/>
+                            <input type='checkbox' onClick={this.handleClickBaffle}/>
                             <span id='checkmark'></span>
                         </label>
+                        <input type='text' placeholder='1' id='baffles1' className='baffles1'/>
+                        <input type='text' placeholder='1' id='baffles2' className='baffles2'/>
                     </div>
                     <div id='margin'>
                         <label id='checkboxContainer'>Combustion Gas Testing
-                            <input type='checkbox'/>
+                            <input type='checkbox' onClick={this.handleClickGas}/>
                             <span id='checkmark'></span>
                         </label>
+                        <input type='text' placeholder='1' id='gas1' className='gas1'/>
+                        <input type='text' placeholder='1' id='gas2' className='gas2'/>
                     </div>
                     <div id='margin'>
                         <label id='checkboxContainer'>CO Detector
-                            <input type='checkbox'/>
+                            <input type='checkbox' onClick={this.handleClickCO}/>
                             <span id='checkmark'></span>
                         </label>
+                        <input type='text' placeholder='1' id='CO1' className='CO1'/>
+                        <input type='text' placeholder='1' id='CO2' className='CO2'/>
                     </div>
                     <div id='margin'>
                         <label id='checkboxContainer'>Energy Audit
-                            <input type='checkbox'/>
+                            <input type='checkbox' onClick={this.handleClickAudit}/>
                             <span id='checkmark'></span>
                         </label>
+                        <input type='text' placeholder='1' id='energyAudit1' className='energyAudit1'/>
+                        <input type='text' placeholder='1' id='energyAudit2' className='energyAudit2'/>
                     </div>
                     <div id='margin'>
                         <label id='checkboxContainer'>Air Seal
-                            <input type='checkbox'/>
+                            <input type='checkbox' onClick={this.handleClickAirSeal}/>
                             <span id='checkmark'></span>
                         </label>
+                        <input type='text' placeholder='1' id='airSeal1' className='airSeal1'/>
+                        <input type='text' placeholder='1' id='airSeal2' className='airSeal2'/>
                     </div>
                     <div id='margin'>
                         <label id='checkboxContainer'>Recess Light Covers
-                            <input type='checkbox'/>
+                            <input type='checkbox' onClick={this.handlelightCovers}/>
                             <span id='checkmark'></span>
                         </label>
+                        <input type='text' placeholder='1' id='lightCovers1' className='lightCovers1'/>
+                        <input type='text' placeholder='1' id='lightCovers2' className='lightCovers2'/>
                     </div>
                     <br/>
                     <div id='submitButtons'>
