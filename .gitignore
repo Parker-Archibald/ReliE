@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /.pnp
+/src/config/Connections.js
 .pnp.js
 
 # testing
