@@ -2,8 +2,8 @@
     position: relative;
     width: 100%;
     background-color: black;
-    color: cyan;
-    border-bottom: 2px solid cyan;
+    color: #66CCCC;
+    border-bottom: 2px solid #70DBDB;
     height: 50px;
     margin-top: 0px;
     text-align: center;
@@ -15,13 +15,12 @@
     left: 0px;
     bottom: 0px;
     width: 100%;
-    background-color: cyan;
+    background-color: #70DBDB;
     border-top: 4px solid black;
     height: 50px;
 }
 
 #siteName {
-    position: relative;
     text-indent: 10px;
     top: 20%;
 }
@@ -94,7 +93,7 @@
 .bar1, .bar2, .bar3 {
   width: 35px;
   height: 5px;
-  background-color: cyan;
+  background-color: #70DBDB;
   margin: 6px 0;
   transition: 0.4s;
 }
@@ -117,7 +116,7 @@
 @keyframes openBar  {
     0% {
         position: relative;
-        background-color: cyan;
+        background-color: #70DBDB;
         width: 220px;
         top: -74px;
         height: 692px;
@@ -127,7 +126,7 @@
     }
     100% {
         position: relative;
-        background-color: cyan;
+        background-color: #70DBDB;
         width: 220px;
         top: -74px;
         height: 692px;
@@ -141,7 +140,7 @@
 @keyframes closeBar {
     0% {
         position: relative;
-        background-color: cyan;
+        background-color: #70DBDB;
         width: 220px;
         top: -74px;
         height: 692px;
@@ -151,7 +150,7 @@
     }
     99% {
         position: relative;
-        background-color: cyan;
+        background-color: #70DBDB;
         width: 220px;
         top: -74px;
         height: 692px;
@@ -161,7 +160,7 @@
     }
     100% {
         position: relative;
-        background-color: cyan;
+        background-color: #70DBDB;
         width: 0px;
         top: -74px;
         height: 0px;

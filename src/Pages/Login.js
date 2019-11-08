@@ -20,11 +20,11 @@ class Login extends Component {
     render() {
         return(
             <div>
-                <div id='logo'><img src={require('../Styles/Pictures/Logo.png')} style={{width: '200px'}}/></div>
+                <div id='logo'></div>
                 <form onSubmit={this.handleSubmit}>
-                    <input type='email' id='loginEmail' name='email' placeholder='Email' onChange={this.handleChange}/>
-                    <input type='password' id='loginPass' name='password' placeholder='Password' onChange={this.handleChange}/>
-                    <button type='submit' id='loginSubmit' className='loginSubmit'>Submit</button>
+                    <div id='loginEmailIn'><input type='email' id='loginEmail' name='email' placeholder='Email' onChange={this.handleChange}/></div>
+                    <div id='loginPassIn'><input type='password' id='loginPass' name='password' placeholder='Password' onChange={this.handleChange}/></div>
+                    <div id='loginSubmitBtn'><button type='submit' id='loginSubmit' className='loginSubmit'>Submit</button></div>
                 </form>
                 <div id='forgotPass'>Forgot Password?</div>
             </div>

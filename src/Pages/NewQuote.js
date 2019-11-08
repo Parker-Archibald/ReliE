@@ -102,7 +102,7 @@ class NewQuote extends Component {
         return(
             <div id='newQuoteBack'>
                 <div id='newQuoteBox'>
-                    <div id='newQuoteTitle'>Create Quote</div>
+                    <div id='newQuoteTitle'>New Quote</div>
                     <div id='newQuoteLine'/>
                     <div id='topRow'>
                         <div id='newQuoteId'>Quote ID: {randomID + 1}</div>
