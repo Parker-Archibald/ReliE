@@ -1,0 +1,49 @@
+#dashBack {
+    position: absolute;
+    height: 87%;
+    top: 52px;
+    width: 100%;
+    background-color: #E8E8E8;
+}
+
+#dashboardBox {
+    position: relative;
+    top: 20px;
+    background-color: white;
+    width: 90%;
+    left: 5%;
+    box-shadow: 1px 1px 3px gray;
+}
+
+#dashboardTitle {
+    text-indent: 10px;
+}
+
+#dashLine {
+    position: relative;
+    border-bottom: 1px solid lightgray;
+    width: 90%;
+    left: 5%;
+    margin-bottom: 20px;
+}
+
+#myProfile {
+    position: relative;
+    border: 1px solid gray;
+    width: 90%;
+    left: 4.5%;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+#personIcon {
+    text-align: center;
+}
+
+#perm_identity {
+    position: relative;
+    font-size: 80px;
+    text-decoration: none;
+    color: black;
+}

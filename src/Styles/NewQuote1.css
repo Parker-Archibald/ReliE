@@ -1,0 +1,7 @@
+#insideBox {
+    position: relative;
+    border: 1px solid gray;
+    width: 90%;
+    left: 4.5%;
+    margin-top: 20px;
+}

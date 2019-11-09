@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {RELIE_API} from '../config/coms';
 import '../Styles/Login.css';
 
 class Login extends Component {
@@ -14,7 +15,9 @@ class Login extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.callback(this.state.email, this.state.password);
+        fetch(`${RELIE_API}/user/${this.state.email}`)
+        .then(results => results.json())
+        .then(data => this.props.callback(data));
     }
 
     render() {

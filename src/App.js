@@ -5,12 +5,12 @@ import {BrowserRouter as Router} from 'react-router-dom';
 
 document.title = 'ReliEnergy';
 
-function App() {
+function App({userId}) {
   return (
     <div>
       <Router>
         <Nav/>
-        <Routes/>
+        <Routes ID={userId}/>
       </Router>
     </div>
   );

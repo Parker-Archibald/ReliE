@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import '../Styles/NewQuote.css';
 
 let randomID = 0;
@@ -216,7 +217,7 @@ class NewQuote extends Component {
                     <br/>
                     <div id='submitButtons'>
                         <button type='submit' id='previousBtn'>Previous</button>
-                        <button type='submit' id='nextBtn'>Next</button>
+                        <Link to='/newquote1'><button type='submit' id='nextBtn'>Next</button></Link>
                     </div>
                     <br/>
 

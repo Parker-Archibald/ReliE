@@ -5,26 +5,25 @@ import App from './App';
 import Login from '../src/Pages/Login';
 import * as serviceWorker from './serviceWorker';
 
-
-let aEmail = 'p@p.com';
-let pass = 'pass';
-
 let testCookie;
 let cookieArray = [];
 
-export const changeLoginStatus = (email, password) => {
-    if(email === aEmail && password === pass) {
-        document.cookie = `loggedIn=true`;
-        testLogin(true);
+export const changeLoginStatus = (info) => {
+    if(info.id > 0) {
+        document.cookie = `loggedIn=true, id=${info.id}`;
+        testLogin(info.id);
     }
     else {
         alert('User not Logged in');
+        document.location.reload(true);
     }
 }
 
-export const testLogin = (status) => {
-    if (document.cookie === `loggedIn=true`) {
-        ReactDOM.render(<App />, document.getElementById('root'));
+export const testLogin = (id) => {
+    testCookie = decodeURIComponent(document.cookie);
+    cookieArray = testCookie.split(',');
+    if (cookieArray[0] === `loggedIn=true`) {
+        ReactDOM.render(<App userId={id}/>, document.getElementById('root'));
     }
     else {
         ReactDOM.render(<Login callback={changeLoginStatus}/>, document.getElementById('root'));
