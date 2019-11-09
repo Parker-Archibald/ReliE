@@ -9,6 +9,7 @@ let testCookie;
 let cookieArray = [];
 
 export const changeLoginStatus = (info) => {
+    console.log(info)
     if(info.id > 0) {
         document.cookie = `loggedIn=true, id=${info.id}`;
         testLogin(info.id);
