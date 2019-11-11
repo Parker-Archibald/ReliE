@@ -16,7 +16,8 @@ class Nav extends Component {
 
     logout = (e) => {
         e.preventDefault();
-        document.cookie = `loggedIn=false, id=0`;
+        document.cookie = `loggedIn=false`;
+        sessionStorage.clear();
         document.location.reload(true);
     }
 
@@ -31,7 +32,7 @@ class Nav extends Component {
                 </div>
                 RELI ENERGY SOLUTIONS
                 </h1>
-                <div id='leftNav' className='leftNav' onblur={this.closeBar}>
+                <div id='leftNav' className='leftNav' onBlur={this.closeBar}>
                     <div onClick={this.closeBar}><Link to='/profile'><button id='profile'>Profile</button></Link></div>
                     <div onClick={this.closeBar}><Link to='/'><button id='dashboard'>Dashboard</button></Link></div>
                     <div onClick={this.closeBar}><Link to='/orders'><button id='orders'>Orders</button></Link></div>
@@ -39,9 +40,9 @@ class Nav extends Component {
                     <div onClick={this.closeBar}><Link to='/paperwork'><button id='paperwork'>Paperwork</button></Link></div>
                     <button id='signout' onClick={this.logout}>Signout</button>
                 </div>
-                <div id='bottomOfPage'>
+                {/* <div id='bottomOfPage'>
                     <div id='siteName'>www.relienergysolutions.com</div>
-                </div>
+                </div> */}
             </div>
         )
     }

@@ -5,3 +5,26 @@
     left: 4.5%;
     margin-top: 20px;
 }
+
+#originalCost1In {
+    position: relative;
+    left: 5%;
+    width: 50%;
+}
+
+#energyAudit {
+    position: relative;
+    height: 40px;
+    background-color: lightgreen;
+}
+
+#outerDiv {
+    position: relative;
+    text-align: end;
+    top: -20px;
+}
+
+#newQuote1In {
+    position: relative;
+    width: 30%;
+}

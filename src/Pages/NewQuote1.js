@@ -11,18 +11,20 @@ class NewQuote1 extends Component {
                     <div id='originalCost1'>Original Cost 1</div>
                     <input id='originalCost1In' placeholder='$'/>
                     <div id='originalCost2'>Original Cost 2</div>
-                    <input id='originalCost2In' placeholder='$'/>
+                    <input id='originalCost1In' placeholder='$'/>
                     <div id='insideBox'>
-                        <div id='energyAudit'>Energy Audit</div>
-                        <div id='airSealing'>Air Sealing</div>
-                        <div id='gasTesting'>Combustion Gas Testing</div>
-                        <div id='ventilation'>Ventilation</div>
-                        <div id='rebate'>Rebate</div>
-                        <div id='costAtInstall'>COST AT INSTALL</div>
-                        <div id='costAtInstall'>Rebate</div>
-                        <div id='costAtInstall'>Tax Credit</div>
-                        <div id='costAtInstall'>TOTAL INVESTMENT</div>
-                        <div id='costAtInstall'>Quote to Convert</div>
+                        <div id='energyAudit'>Energy Audit 
+                        <div id='outerDiv'><input id='newQuote1In' type='text' placeholder='$'/></div>
+                        </div>
+                        <div id='airSealing'>Air Sealing<div id='outerDiv'><input id='newQuote1In' type='text' placeholder='$'/></div></div>
+                        <div id='gasTesting'>Combustion Gas Testing <div id='outerDiv'><input id='newQuote1In' type='text' placeholder='$'/></div></div>
+                        <div id='ventilation'>Ventilation <div id='outerDiv'><input id='newQuote1In' type='text' placeholder='$'/></div></div>
+                        <div id='rebate'>Rebate <div id='outerDiv'><input id='newQuote1In' type='text' placeholder='$'/></div></div>
+                        <div id='costAtInstall'>COST AT INSTALL <div id='outerDiv'><input id='newQuote1In' type='text' placeholder='$'/></div></div>
+                        <div id='costAtInstall'>Rebate <div id='outerDiv'><input id='newQuote1In' type='text' placeholder='$'/></div></div>
+                        <div id='costAtInstall'>Tax Credit <div id='outerDiv'><input id='newQuote1In' type='text' placeholder='$'/></div></div>
+                        <div id='costAtInstall'>TOTAL INVESTMENT <div id='outerDiv'><input id='newQuote1In' type='text' placeholder='$'/></div></div>
+                        <div id='costAtInstall'>Quote to Convert <div id='outerDiv'><input id='newQuote1In' type='text' placeholder='$'/></div></div>
                     </div>
                 </div>
             </div>

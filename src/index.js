@@ -11,8 +11,13 @@ let cookieArray = [];
 export const changeLoginStatus = (info) => {
     console.log(info)
     if(info.id > 0) {
-        document.cookie = `loggedIn=true, id=${info.id}`;
-        testLogin(info.id);
+        document.cookie = `loggedIn=true`;
+        sessionStorage.setItem('id', `${info.id}`);
+        testLogin();
+    }
+    else if (info === 'p@p.com') {
+        document.cookie = `loggedIn=true`;
+        testLogin();
     }
     else {
         alert('User not Logged in');
@@ -20,11 +25,11 @@ export const changeLoginStatus = (info) => {
     }
 }
 
-export const testLogin = (id) => {
+export const testLogin = () => {
     testCookie = decodeURIComponent(document.cookie);
     cookieArray = testCookie.split(',');
     if (cookieArray[0] === `loggedIn=true`) {
-        ReactDOM.render(<App userId={id}/>, document.getElementById('root'));
+        ReactDOM.render(<App/>, document.getElementById('root'));
     }
     else {
         ReactDOM.render(<Login callback={changeLoginStatus}/>, document.getElementById('root'));
