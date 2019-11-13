@@ -14,7 +14,6 @@ class Quotes extends Component {
         if(sessionStorage.id != undefined) {
         fetch(`${RELIE_API}/quotes/${sessionStorage.id}`)
         .then(results => results.json())
-        // .then(data=> console.log(data))
         .then(data => data.map(data => <SingleQuote info={data}/>))
         .then(data => this.setState({info: data}))
         }

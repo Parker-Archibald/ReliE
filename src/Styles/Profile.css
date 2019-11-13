@@ -5,3 +5,57 @@
     width: 100%;
     background-color: #E8E8E8;
 }
+
+#profileBox {
+    position: relative;
+    background-color: white;
+    width: 90%;
+    left: 5%;
+    top: 20px;
+}
+
+#profilePic {
+    background-image: url('../Styles/Pictures/profile.png');
+    background-size: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 200px;
+}
+
+.profilePicIn {
+    display: none;
+}
+
+.hideProfilePic {
+    display: none;
+}
+
+.showProfilePic {
+    display: inherit;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#fileSelect {
+    display: none;
+}
+
+#selectPicDiv {
+    text-align: center;
+}
+
+#selectImgBtn {
+    position: relative;
+    border: none;
+    background-color: #70DBDB;
+    color: white;
+    border-radius: 3px;
+    font-size: 20px;
+}
+
+/* #selectImgBtn:active, #selectImgBtn:focus {
+    border: 5px solid green;
+} */

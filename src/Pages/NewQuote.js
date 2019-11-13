@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import {RELIE_API} from '../config/coms';
 import '../Styles/NewQuote.css';
 
-let randomID = 0;
 let today = new Date();
 let dd = String(today.getDate()).padStart(2, '0');
 let mm = String(today.getMonth() + 1).padStart(2, '0');
@@ -97,7 +97,94 @@ class NewQuote extends Component {
             document.getElementById('lightCovers2').className = 'lightCovers2';
         }
     }
-    handlelightCovers
+
+    componentDidMount = () => {
+
+        //fetch the latest quote id number
+        fetch(`${RELIE_API}/quoteLatestId`)
+        .then(results => results.json())
+        .then(data => this.setState({quote_id: data.quote_id + 1}))
+        
+        //fetch product prices
+        fetch(`${RELIE_API}/productPrices`)
+        .then(results => results.json())
+        .then(data => data.map(data => {
+            const {prod_id, prod_type_id, prod_calc, prod_description, created_by, modified_by, created_date, modified_date, ...newData} = data;
+            return newData;
+        }))
+        .then(data => {
+            for(let i = 0; i < data.length; i++) {
+                if(data[i].prod_name === 'Admin Fee - 0') {
+                    this.setState({adminFee_0Price: data[i].prod_cost})
+                }
+                else if(data[i].prod_name === 'Solar Fan') {
+                    this.setState({solarfanPrice: data[i].prod_cost})
+                }
+                else if(data[i].prod_name === 'Exhaust Fan Ventilation') {
+                    this.setState({ventPrice: data[i].prod_cost})
+                }
+                else if(data[i].prod_name === 'Baffles') {
+                    this.setState({bafflesPrice: data[i].prod_cost})
+                }
+                else if(data[i].prod_name === 'Energy Audit') {
+                    this.setState({auditPrice: data[i].prod_cost})
+                }
+                else if(data[i].prod_name === 'Combustion Gas Testing') {
+                    this.setState({gasTestingPrice: data[i].prod_cost})
+                }
+                else if(data[i].prod_name === 'LED can Light') {
+                    this.setState({ledLightPrice: data[i].prod_cost})
+                }
+                else if(data[i].prod_name === 'CO Detector') {
+                    this.setState({coDetectorPrice: data[i].prod_cost})
+                }
+                else if(data[i].prod_name === 'Admin Fee - 50') {
+                    this.setState({adminFee_50Price: data[i].prod_cost})
+                }
+                else if(data[i].prod_name === 'Admin Fee - 100 ') {
+                    this.setState({adminFee_100Price: data[i].prod_cost})
+                }
+                else if(data[i].prod_name === 'Admin Fee - 200') {
+                    this.setState({adminFee_200Price: data[i].prod_cost})
+                }
+                else if(data[i].prod_name === 'Admin Fee - 300') {
+                    this.setState({adminFee_300Price: data[i].prod_cost})
+                }
+                else if(data[i].prod_name === 'Energy Audit') {
+                    this.setState({auditPrice: data[i].prod_cost})
+                }
+                else if(data[i].prod_name === 'Air Seal') {
+                    this.setState({airSealingPrice: data[i].prod_cost})
+                }
+                else if(data[i].prod_name === 'Tech Fee') {
+                    this.setState({techFeePrice: data[i].prod_cost})
+                }
+                else if(data[i].prod_name === 'Recess Light Covers') {
+                    this.setState({recessLightCoversPrice: data[i].prod_cost})
+                }
+            }
+        })
+    }
+
+    state = {
+        quote_id: '',
+        date: today,
+        solarfanPrice: '',
+        ventPrice: '',
+        bafflesPrice: '',
+        auditPrice: '',
+        airSealingPrice: '',
+        gasTestingPrice: '',
+        ledLightPrice: '',
+        coDetectorPrice: '',
+        adminFee_0Price: '',
+        adminFee_50Price: '',
+        adminFee_100Price: '',
+        adminFee_200Price: '',
+        adminFee_300Price: '',
+        techFeePrice: '',
+        recessLightCoversPrice: ''
+    }
 
     render() {
         return(
@@ -106,8 +193,8 @@ class NewQuote extends Component {
                     <div id='newQuoteTitle'>New Quote</div>
                     <div id='newQuoteLine'/>
                     <div id='topRow'>
-                        <div id='newQuoteId'>Quote ID: {randomID + 1}</div>
-                        <div id='newQuoteDate'>Date: {today}</div>
+                        <div id='newQuoteId'>Quote ID: {this.state.quote_id}</div>
+                        <div id='newQuoteDate'>Date: {this.state.date}</div>
                     </div>
                     <div id='newSquareFoot'>Square Foot:</div>
                     <div id='newPreRVal'>Pre R Value:</div>

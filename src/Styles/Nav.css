@@ -120,7 +120,7 @@
         background-color: #70DBDB;
         width: 220px;
         top: -74px;
-        height: 692px;
+        height: 900px;
         font-size: 25px;
         left: -210px;
         margin-bottom: -640px;
@@ -130,7 +130,8 @@
         background-color: #70DBDB;
         width: 220px;
         top: -74px;
-        height: 692px;
+        height: 900px;
+        bottom: 0;
         font-size: 25px;
         left: 0px;
         z-index: 1000;
@@ -144,7 +145,7 @@
         background-color: #70DBDB;
         width: 220px;
         top: -74px;
-        height: 692px;
+        height: 900px;
         font-size: 25px;
         left: 0px;
         margin-bottom: -640px;
@@ -154,7 +155,7 @@
         background-color: #70DBDB;
         width: 220px;
         top: -74px;
-        height: 692px;
+        height: 900px;
         font-size: 25px;
         left: -400px;
         margin-bottom: -640px;

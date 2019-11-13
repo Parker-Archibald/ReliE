@@ -1,7 +1,13 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import '../Styles/NewQuote1.css';
 
 class NewQuote1 extends Component {
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
     render() {
         return (
             <div id='newQuoteBack'>
@@ -26,6 +32,9 @@ class NewQuote1 extends Component {
                         <div id='costAtInstall'>TOTAL INVESTMENT <div id='outerDiv'><input id='newQuote1In' type='text' placeholder='$'/></div></div>
                         <div id='costAtInstall'>Quote to Convert <div id='outerDiv'><input id='newQuote1In' type='text' placeholder='$'/></div></div>
                     </div>
+                    <div id='submitButtons'>
+                        <Link to='/newquote'><button type='submit' id='previousBtn'>Previous</button></Link>
+                        <button type='submit' id='nextBtn' onClick={this.handleSubmit}>Submit</button></div>
                 </div>
             </div>
         )
