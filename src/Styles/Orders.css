@@ -5,3 +5,60 @@
     width: 100%;
     background-color: #E8E8E8;
 }
+
+#ordersBox {
+    position: relative;
+    top: 20px;
+    background-color: white;
+    width: 90%;
+    left: 5%;
+    box-shadow: 1px 1px 3px gray;
+}
+
+#ordersTitle {
+    position: relative;
+    left: 2%;
+}
+
+#searchIcon {
+    position: relative;
+    top: 9px;
+}
+
+#ordersSearchBar {
+    position: relative;
+    width: 55%;
+    border: 1px solid gray;
+    left: 25px;
+}
+
+#searchByOpt {
+    position: relative;
+    left: 2%;
+}
+
+#orderSearchBtn {
+    position: relative;
+    left: 25px;
+    border: none;
+    background-color: white;
+}
+
+#singleOrderBox {
+    position: relative;
+    width: 90%;
+    height: 40px;
+    top: 10px;
+    left: 0;
+    font-size: 20px;
+    border: none;
+    border-top: 1px solid lightgray;
+    background-color: inherit;
+    text-align: left;
+}
+
+#searchedOrders {
+    position: relative;
+    margin-top: 10px;
+    left: 4%;
+}
