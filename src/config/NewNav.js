@@ -35,6 +35,7 @@ class NewNav extends Component {
               <Link to='/orders'><li><a>Orders</a></li></Link>
               <Link to='/quotes'><li><a>Quotes</a></li></Link>
               <Link to='/paperwork'><li><a>Paperwork</a></li></Link>
+              <li onClick={this.logout}><a>Signout</a></li>
             </ul>
            </div>
           </nav>
