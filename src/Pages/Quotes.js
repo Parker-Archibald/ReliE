@@ -20,6 +20,8 @@ class Quotes extends Component {
         else {
             this.setState({info: <SingleQuote/>})
         }
+
+        document.getElementById('menuCheckbox').click();
     }
 
     render() {

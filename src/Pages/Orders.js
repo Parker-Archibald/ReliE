@@ -46,6 +46,10 @@ class Orders extends Component {
         })
     }
 
+    componentDidMount = () => {
+        document.getElementById('menuCheckbox').click();
+    }
+
     render() {
         return(
             <div id='ordersBack'>

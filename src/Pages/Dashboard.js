@@ -3,6 +3,11 @@ import {Link} from 'react-router-dom';
 import '../Styles/Dashboard.css';
 
 class Dashboard extends Component {
+
+    componentDidMount = () => {
+        document.getElementById('menuCheckbox').click();
+    }
+
     render() {
         return(
             <div id='dashBack'>

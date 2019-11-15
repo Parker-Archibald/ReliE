@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import '../Styles/NewNav.css';
 
 class NewNav extends Component {
@@ -35,7 +35,7 @@ class NewNav extends Component {
               <Link to='/orders'><li><a>Orders</a></li></Link>
               <Link to='/quotes'><li><a>Quotes</a></li></Link>
               <Link to='/paperwork'><li><a>Paperwork</a></li></Link>
-              <li onClick={this.logout}><a>Signout</a></li>
+              <Link><li onClick={this.logout}><a>Signout</a></li></Link>
             </ul>
            </div>
           </nav>

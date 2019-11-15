@@ -14,6 +14,8 @@ class Profile extends Component {
         fetch(`${RELIE_API}/profile/${sessionStorage.id}`)
         .then(results => results.json())
         .then(data => this.setState({first_name: data.first_name, last_name: data.last_name}));
+
+        document.getElementById('menuCheckbox').click();
     }
 
     showPicture = (e) => {
