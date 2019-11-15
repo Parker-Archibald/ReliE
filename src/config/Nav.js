@@ -33,11 +33,11 @@ class Nav extends Component {
                 RELI ENERGY SOLUTIONS
                 </h1>
                 <div id='leftNav' className='leftNav' onBlur={this.closeBar}>
-                    <div onClick={this.closeBar}><Link to='/profile'><button id='profile'>Profile</button></Link></div>
-                    <div onClick={this.closeBar}><Link to='/'><button id='dashboard'>Dashboard</button></Link></div>
-                    <div onClick={this.closeBar}><Link to='/orders'><button id='orders'>Orders</button></Link></div>
-                    <div onClick={this.closeBar}><Link to='/quotes'><button id='quotes'>Quotes</button></Link></div>
-                    <div onClick={this.closeBar}><Link to='/paperwork'><button id='paperwork'>Paperwork</button></Link></div>
+                    <div onClick={this.closeBar}><Link to='/test/profile'><button id='profile'>Profile</button></Link></div>
+                    <div onClick={this.closeBar}><Link to='/test/'><button id='dashboard'>Dashboard</button></Link></div>
+                    <div onClick={this.closeBar}><Link to='/test/orders'><button id='orders'>Orders</button></Link></div>
+                    <div onClick={this.closeBar}><Link to='/test/quotes'><button id='quotes'>Quotes</button></Link></div>
+                    <div onClick={this.closeBar}><Link to='/test/paperwork'><button id='paperwork'>Paperwork</button></Link></div>
                     <button id='signout' onClick={this.logout}>Signout</button>
                 </div>
                 {/* <div id='bottomOfPage'>

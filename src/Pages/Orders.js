@@ -10,7 +10,7 @@ class Orders extends Component {
         searchByOpt: '',
         cust_id: '',
         order_id: '',
-        orderList: ''
+        orderList: []
     }
 
     handleChange = ({target}) => {
@@ -27,14 +27,23 @@ class Orders extends Component {
 
     handleClick = (e) => {
         e.preventDefault();
-        let newData = [];
+        if(this.state.orderList !== '') {
+            this.setState({orderList: ''})
+        }
 
         //fetch cust_id
 
         fetch(`${RELIE_API}/customer/${this.state.searchByOpt}/${this.state.searchCriteria}`)
         .then(results => results.json())
-        .then(data => data.map(data => <SingleOrder orderData={data}/>))
-        .then(data => this.setState({orderList: data}))
+        .then(data => data.map(data => <SingleOrder orderData={data} callback={this.testOrder}/>))
+        .then(data => {
+            if(data == [] || data == '') {
+                this.setState({orderList: 'No Orders Found'})
+            }
+            else {
+                this.setState({orderList: data})
+            }
+        })
     }
 
     render() {
@@ -43,7 +52,7 @@ class Orders extends Component {
                 <div id='ordersBox'>
                     <div id='ordersTitle'>Orders</div>
                     <div id='underline'/>
-                    <form onSubmit={this.handleClick}>
+                    <form onSubmit={this.handleClick} id='orderSearchForm'>
                         <select required id='searchByOpt' name='searchByOpt' onChange={this.handleChange}>
                             <option default hidden value="">Select one</option>
                             <option>First name</option>
@@ -52,8 +61,15 @@ class Orders extends Component {
                         <input required type='text' id='ordersSearchBar' name='searchCriteria' onChange={this.handleChange} placeholder='Search for Order'/>
                         <button id='orderSearchBtn'><i class="material-icons" id='searchIcon'>search</i></button>
                     </form>
+                    <div id='underline'/>
                     <div id='searchedOrders'>{this.state.orderList}</div>
                 </div>
+                {/* <div id='newOrdersBox'>
+                    <div id='newOrderTitle'>Add a New Order</div>
+                    <div id='underline'/>
+                    <button>New Order</button>
+                </div> */}
+                <div id='newOrderBtnDiv'><button id='newOrderBtn'>New Order</button></div>
             </div>
         )
     }

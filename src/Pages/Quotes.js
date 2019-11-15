@@ -27,7 +27,7 @@ class Quotes extends Component {
             <div id='quotesBack'>
                 <div id='quoteBox'>
                     <div id='quoteTitle'>Quotes</div>
-                    <Link to='/newquote'><button id='newQuote'>Add New</button></Link>
+                    <Link to='/test/newquote'><button id='newQuote'>Add New</button></Link>
                 </div>
                 <div id='allQuotes'>
                     <div id='allQuotesTitle'>All Quotes</div>

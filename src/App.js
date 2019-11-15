@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from '../src/config/Nav';
+import NewNav from '../src/config/NewNav';
 import Routes from '../src/config/Routes';
 import './index.css';
 import {BrowserRouter as Router} from 'react-router-dom';
@@ -10,7 +10,7 @@ function App({userId}) {
   return (
     <div id='allApp'>
       <Router>
-        <Nav/>
+        <NewNav/>
         <Routes ID={userId}/>
       </Router>
     </div>

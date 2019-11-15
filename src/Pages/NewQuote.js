@@ -304,7 +304,7 @@ class NewQuote extends Component {
                     <br/>
                     <div id='submitButtons'>
                         <button type='submit' id='previousBtn'>Previous</button>
-                        <Link to='/newquote1'><button type='submit' id='nextBtn'>Next</button></Link>
+                        <Link to='/test/newquote1'><button type='submit' id='nextBtn'>Next</button></Link>
                     </div>
                     <br/>
 

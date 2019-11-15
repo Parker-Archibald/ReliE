@@ -15,7 +15,8 @@
 #energyAudit {
     position: relative;
     height: 40px;
-    background-color: lightgreen;
+    background-color: rgb(211, 248, 211);
+
 }
 
 #outerDiv {
