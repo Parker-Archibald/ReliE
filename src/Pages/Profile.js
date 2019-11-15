@@ -7,7 +7,7 @@ class Profile extends Component {
     state = {
         id: '',
         first_name: '',
-        file: ''
+        file: '',
     }
 
     componentDidMount = () => {
@@ -15,7 +15,15 @@ class Profile extends Component {
         .then(results => results.json())
         .then(data => this.setState({first_name: data.first_name, last_name: data.last_name}));
 
-        document.getElementById('menuCheckbox').click();
+        let menuOpen = false;
+
+        if(this.props.location.menuOpen === true) {
+            menuOpen = true;
+        }
+
+        if(menuOpen === true) {
+            document.getElementById('menuCheckbox').click();
+        }
     }
 
     showPicture = (e) => {

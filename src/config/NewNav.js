@@ -30,7 +30,7 @@ class NewNav extends Component {
                 <span></span>
                 <span></span>
             <ul id="menu">
-              <Link to='/profile'><li id='navProfile'><a>Profile</a></li></Link>
+              <Link to={{pathname: '/profile', menuOpen: true}} ><li id='navProfile'><a>Profile</a></li></Link>
               <Link to='/'><li><a>Dashboard</a></li></Link>
               <Link to='/orders'><li><a>Orders</a></li></Link>
               <Link to='/quotes'><li><a>Quotes</a></li></Link>

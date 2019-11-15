@@ -15,7 +15,7 @@ class Dashboard extends Component {
                     <div id='dashboardTitle'>Dashboard</div>
                     <div id='dashLine'/>
                     <div id='myProfile'>
-                    <Link to='/profile' style={{textDecoration: 'none', color: 'black'}}>
+                    <Link to={{pathname: '/profile', menuOpen: false}} style={{textDecoration: 'none', color: 'black'}}>
                     <div id='personIcon'><i class="material-icons" id='perm_identity'>perm_identity</i></div>
                         My Profile
                     </Link>
