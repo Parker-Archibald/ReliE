@@ -5,7 +5,15 @@ import '../Styles/Dashboard.css';
 class Dashboard extends Component {
 
     componentDidMount = () => {
-        document.getElementById('menuCheckbox').click();
+        let menuOpen = false;
+
+        if(this.props.location.menuOpen === true) {
+            menuOpen = true;
+        }
+
+        if(menuOpen === true) {
+            document.getElementById('menuCheckbox').click();
+        }
     }
 
     render() {

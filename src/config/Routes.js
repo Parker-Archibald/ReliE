@@ -10,11 +10,15 @@ import NewQuote from '../Pages/NewQuote';
 import NewQuote1 from '../Pages/NewQuote1';
 import SingleOrderInfo from '../Pages/SingleOrderInfo';
 import NewNav from '../config/NewNav';
+import I99 from '../Pages/I99';
+import DirectDeposit from '../Pages/DirectDeposit';
+import WNine from '../Pages/WNine';
+import Training from '../Pages/Training';
 
 const Routes = ({ID}) => {
     return (
         <>
-            <Route exact path='/' component={() => <Dashboard/>}/>
+            <Route exact path='/' render={(props) => <Dashboard {...props}/>}/>
             <Route path='/calculator' component={() => <Calculator/>}/>
             <Route path='/profile' render={(props) => <Profile {...props} ID={ID}/>}/>
             <Route path='/orders' component={() => <Orders/>} />
@@ -24,6 +28,10 @@ const Routes = ({ID}) => {
             <Route path='/newquote1' component={() => <NewQuote1/>}/>
             <Route path='/singleOrderInfo/:firstName/:lastName' render={(props) => <SingleOrderInfo {...props}/>}/>
             <Route path='/newNav' component={() => <NewNav/>}/>
+            <Route path='/1099' component={() => <I99/>}/>
+            <Route path='/directDeposit' component={() => <DirectDeposit/>}/>
+            <Route path='/W9' component={() => <WNine/>}/>
+            <Route path='/training' component={() => <Training/>}/>
         </>
     )
 }

@@ -12,6 +12,27 @@
     width: 90%;
     left: 5%;
     top: 20px;
+    box-shadow: 2px 2px 4px 1px gray;
+}
+
+
+#profileBoxInfo {
+    position: relative;
+    background-color: white;
+    width: 90%;
+    left: 5%;
+    box-shadow: 2px 2px 4px 1px gray;
+    top: 40px;
+}
+
+#profileFname, #profileLname {
+    text-indent: 10px;
+}
+
+#profileInfoTitle {
+    font-size: 20px;
+    text-indent: 10px;
+    margin-bottom: 10px;
 }
 
 #profilePic {

@@ -33,7 +33,7 @@ class NewQuote1 extends Component {
                         <div id='costAtInstall'>Quote to Convert <div id='outerDiv'><input id='newQuote1In' type='text' placeholder='$'/></div></div>
                     </div>
                     <div id='submitButtons'>
-                        <Link to='/test/newquote'><button type='submit' id='previousBtn'>Previous</button></Link>
+                        <Link to='/newquote'><button type='submit' id='previousBtn'>Previous</button></Link>
                         <button type='submit' id='nextBtn' onClick={this.handleSubmit}>Submit</button></div>
                 </div>
             </div>

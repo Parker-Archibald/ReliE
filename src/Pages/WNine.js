@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 
-class ReliContracts extends Component {
+class WNine extends Component{
     render() {
         return(
             <div>
-                contracts
+                W-9
             </div>
         )
     }
 }
-export default ReliContracts;
+export default WNine;

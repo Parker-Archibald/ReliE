@@ -46,8 +46,12 @@ class Profile extends Component {
                     <div id='selectPicDiv'><button onClick={this.handleBtn} id='selectImgBtn'>Select Image</button></div>
                     <img id='profilePicIn' className='profilePicIn' src={this.state.file}/>
                     <input type='file' accept='image/jpeg, image/png' onChange={this.showPicture} id='fileSelect'/>
-                    <div>{this.state.first_name}</div>
-                    <div>{this.state.last_name}</div>
+                </div>
+                <div id='profileBoxInfo'>
+                    <div id='profileInfoTitle'>My Profile</div>
+                    <div id='underline'/>
+                    <div id='profileFname'>First Name: {this.state.first_name}</div>
+                    <div id='profileLname'>Last Name: {this.state.last_name}</div>
                 </div>
             </div>
         )
