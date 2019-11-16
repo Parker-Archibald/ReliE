@@ -12,11 +12,22 @@
     width: 50%;
 }
 
+#originalCost1 {
+    text-indent: 10px;
+}
+
+#originalCost2 {
+    text-indent: 10px;
+}
+
 #energyAudit {
     position: relative;
     height: 40px;
     background-color: rgb(211, 248, 211);
+}
 
+#gasTesting {
+    background-color: rgb(211, 248, 211);
 }
 
 #outerDiv {
@@ -28,6 +39,18 @@
 #newQuote1In {
     position: relative;
     width: 30%;
+}
+
+#rebate {
+    background-color: rgb(211, 248, 211);
+}
+
+#rebate1 {
+    background-color: rgb(211, 248, 211);
+}
+
+#total {
+    background-color: rgb(211, 248, 211);
 }
 
 #previousBtn {

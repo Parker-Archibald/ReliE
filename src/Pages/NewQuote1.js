@@ -27,10 +27,10 @@ class NewQuote1 extends Component {
                         <div id='ventilation'>Ventilation <div id='outerDiv'><input id='newQuote1In' type='text' placeholder='$'/></div></div>
                         <div id='rebate'>Rebate <div id='outerDiv'><input id='newQuote1In' type='text' placeholder='$'/></div></div>
                         <div id='costAtInstall'>COST AT INSTALL <div id='outerDiv'><input id='newQuote1In' type='text' placeholder='$'/></div></div>
-                        <div id='costAtInstall'>Rebate <div id='outerDiv'><input id='newQuote1In' type='text' placeholder='$'/></div></div>
-                        <div id='costAtInstall'>Tax Credit <div id='outerDiv'><input id='newQuote1In' type='text' placeholder='$'/></div></div>
-                        <div id='costAtInstall'>TOTAL INVESTMENT <div id='outerDiv'><input id='newQuote1In' type='text' placeholder='$'/></div></div>
-                        <div id='costAtInstall'>Quote to Convert <div id='outerDiv'><input id='newQuote1In' type='text' placeholder='$'/></div></div>
+                        <div id='rebate1'>Rebate <div id='outerDiv'><input id='newQuote1In' type='text' placeholder='$'/></div></div>
+                        <div id='tasCredit'>Tax Credit <div id='outerDiv'><input id='newQuote1In' type='text' placeholder='$'/></div></div>
+                        <div id='total'>TOTAL INVESTMENT <div id='outerDiv'><input id='newQuote1In' type='text' placeholder='$'/></div></div>
+                        <div id='toConvert'>Quote to Convert <div id='outerDiv'><input id='newQuote1In' type='text' placeholder='$'/></div></div>
                     </div>
                     <div id='submitButtons'>
                         <Link to='/newquote'><button type='submit' id='previousBtn'>Previous</button></Link>
